@@ -12,14 +12,28 @@ Dans ce fichier `README.md` vous devez décrire en format Markdown chacune des �
 
 Notre équipe projet est composée par :
 
-- Prénom NOM (Rôle)
-- 
-- 
-- 
+- Samar Chamkhi (Project manager and Storage)
+- Longrui Ma (Project manager and Storage)
+- Yanjun Ge (Storage)
+- Mouahid Balle (Reactive Streaming)
+- Nicolas Tordomar (Reactive Streaming)
+- Sofia Paula Altman Vogl (Reactive Streaming)
+- Luciano Neimark (Reactive Streaming)
+- Sokhna Diata (Sensors and messaging)
+- Xinyi Liu (Sensors and messaging)
+- Van Quang (Sensors and messaging)
+- Alpha Kabinet Cisse (DevOps)
+- Yunwei Sun (DevOps)
+- Chijin Gui (DevOps)
+- Hamza Dihmane (Computing)
+- Rafael Ouillon (Computing)
+- Leo Pyla (Computing)
+- Cristóbal Valenzuela (Computing)
+
+
+
 
 ## Description du Projet
-
-
 
 ### Infrastructure
 
@@ -43,19 +57,20 @@ Les noeuds sont à réserver sur le site web de la plateforme.
 ## Répartition des tâches
 Lors de ce projet les tâches ont été réparties comme suit :
 
-- 
-- 
-- 
+- Sensors and messaging Team
+- Reactive Streaming Team
+- Storage Team
+- Computing Team
+- Deployment Team 
 
 ### Suivi journalier
 
 **Vendredi 04/10/2024** :
-- 
-- 
-- 
-- 
-- 
-- 
+- Introduction et présentation du projet Cloud IoT
+- Répartition des équipes 
+- Création d'un board Trello global pour la gestion de projet
+- Création d'un serveur Discord avec des channels pour la communication
+- Prise de décision  sur le sujet de notre projet 
 
 **Vendredi 11/10/2024** :
 - 
