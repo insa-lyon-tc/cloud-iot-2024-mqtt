@@ -10,7 +10,7 @@ public class KafkaConfig {
 
     public void loadKafkaConfig() {
         try {
-            String content = new String(Files.readAllBytes(Paths.get("kafkaProperties.json")));
+            String content = new String(Files.readAllBytes(Paths.get("/Users/luciano/Desktop/cloud-iot-2024-mqtt/Reactive Stream/mon-projet-kafka/src/main/kafkaProperties.json")));
             JSONObject json = new JSONObject(content);
             this.kafkaIP = json.getString("kafkaIP");
             this.kafkaPort = json.getString("kafkaPort");
