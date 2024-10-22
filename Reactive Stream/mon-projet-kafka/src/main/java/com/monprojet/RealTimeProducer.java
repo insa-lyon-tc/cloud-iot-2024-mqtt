@@ -9,7 +9,15 @@ import java.util.Scanner;
 public class RealTimeProducer {
     public static void main(String[] args) {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "localhost:9092");
+
+        KafkaConfig config = new KafkaConfig();
+        config.loadKafkaConfig();
+        String kafkaIP = config.getKafkaIP();
+        String kafkaPort = config.getKafkaPort();
+        String kafkaAddress = kafkaIP + ":" + kafkaPort;
+
+
+        props.put("bootstrap.servers", kafkaAddress);
         props.put("key.serializer", "org.apache.kafka.common.serialization.StringSerializer");
         props.put("value.serializer", "org.apache.kafka.common.serialization.StringSerializer");
 

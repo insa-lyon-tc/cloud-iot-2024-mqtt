@@ -11,10 +11,18 @@ import java.util.Properties;
 public class RealTimeConsumer {
     public static void main(String[] args) {
         Properties props = new Properties();
-        props.put("bootstrap.servers", "192.168.158.200:9092");
+
+        KafkaConfig config = new KafkaConfig();
+        config.loadKafkaConfig();
+        String kafkaIP = config.getKafkaIP();
+        String kafkaPort = config.getKafkaPort();
+        String kafkaAddress = kafkaIP + ":" + kafkaPort;
+
+        props.put("bootstrap.servers", kafkaAddress);
         props.put("group.id", "groupe_unique_" + UUID.randomUUID()); // Chaque consommateur a un group.id unique
         props.put("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.put("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
+
 
         KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props);
         consumer.subscribe(Collections.singletonList("mon_topic"));
