@@ -67,19 +67,18 @@ Lors de ce projet les tâches ont été réparties comme suit :
 ### Suivi journalier
 
 **Vendredi 04/10/2024** :
-- Introduction et présentation du projet Cloud IoT
-- Répartition des équipes 
-- Création d'un board Trello global pour la gestion de projet
-- Création d'un serveur Discord avec des channels pour la communication
-- Prise de décision  sur le sujet de notre projet 
+- Introduction and presentation of Cloud Iot project
+- Assignment of groups  
+- Creation of a global Trello board for project management
+- Creation of a Discord server with channels for communication
+- Decision-making on the topic of our project
 
 **Vendredi 11/10/2024** :
-- 
-- 
-- 
-- 
-- 
-- 
+- Sensors and messaging team set up an MQTT network using Mosquitto, starting with the creation of a Youpi account, though they encountered some initial issues connecting the Raspberry Pi due to SD card problems. After resolving these, they successfully installed Mosquitto on the Raspberry Pi and began configuring it for client/server communication. Additionally, they connected a microphone and sound card to the Raspberry Pi to integrate sensor capabilities into the setup
+- Computing team successfully ran audio transcription models for both French and English locally on a PC, achieving a transcription speed of 0.7 seconds for 5-second audio clips. They also explored methods to handle sliced audio segments to prevent word loss during transcription, discussing the potential use of Spark to leverage greater computing power for improved performance.
+- Storage team studied the structure of databases and proposed two schema designs for distributed data storage using MongoDB, aiming to optimize data management and scalability.
+- Deployment team successfully deployed the Mosquitto Docker image and successfully established communication between two local terminals using Docker. However, attempts to run the setup between two distant computers were unsuccessful, highlighting the need for further troubleshooting.
+- Reactive Streaming Team decided to set up a Kafka instance to facilitate communication between multiple PCs and successfully established messaging between three PCs acting as a queue, producer, and consumer using a personal hotspot. However, they faced a setback as they were unable to connect through the faculty Wi-Fi (Eduroam). 
 
 **Mardi 22/10/2024** :
 - 
