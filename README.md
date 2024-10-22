@@ -18,6 +18,7 @@ Notre équipe projet est composée par :
 - Mouahid Balle (Reactive Streaming)
 - Nicolas Tordomar (Reactive Streaming)
 - Sofia Paula Altman Vogl (Reactive Streaming)
+- Felipe Mindlin (Reactive Streaming)
 - Luciano Neimark (Reactive Streaming)
 - Sokhna Diata (Sensors and messaging)
 - Xinyi Liu (Sensors and messaging)
@@ -29,7 +30,7 @@ Notre équipe projet est composée par :
 - Rafael Ouillon (Computing)
 - Leo Pyla (Computing)
 - Cristóbal Valenzuela (Computing)
-
+- Ewan Talec (Computing)
 
 
 
