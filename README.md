@@ -19,7 +19,6 @@ Notre équipe projet est composée par :
 - Nicolas Tordomar (Reactive Streaming)
 - Sofia Paula Altman Vogl (Reactive Streaming)
 - Felipe Mindlin (Reactive Streaming)
-- Luciano Neimark (Reactive Streaming)
 - Sokhna Diata (Sensors and messaging)
 - Xinyi Liu (Sensors and messaging)
 - Van Quang (Sensors and messaging)
@@ -81,21 +80,12 @@ Lors de ce projet les tâches ont été réparties comme suit :
 - Reactive Streaming Team decided to set up a Kafka instance to facilitate communication between multiple PCs and successfully established messaging between three PCs acting as a queue, producer, and consumer using a personal hotspot. However, they faced a setback as they were unable to connect through the faculty Wi-Fi (Eduroam). 
 
 **Mardi 22/10/2024** :
-- 
-- 
-- 
-- 
-- 
-- 
-
-**Vendredi 26/01/2024** :
-- 
-- 
-- 
-- 
-- 
-- 
-
+- Sensors and messaging team have implemented a publisher and two subscribers. Theu, also succeeded to record and publish an audio file on one node. 
+- Reactive Streaming team configured Kafka for multiple consumers.
+- Computing team started working on spark investigation and Testing models on Raspberry Pi 3B
+- Storage team did a local deployment of MangoDB
+- Deployment team tested MangDB, Spark and kafka with Docker images.
+  
 **Mercredi 13/11/2024** :
 - 
 - 
