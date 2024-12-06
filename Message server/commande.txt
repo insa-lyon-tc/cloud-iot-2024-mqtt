@@ -1,0 +1,29 @@
+#record the audio file
+sudo arecord -D plughw:1,0 -f cd ~/test.wav
+##entrer ctrl+c to stop
+
+#play the audio file
+sudo aplay -D plughw:1,0 ~/test.wav
+
+#check sound card work well
+sudo aplay -l
+
+#check the file size
+ls -lh
+
+#preparation install
+sudo apt install mosquitto mosquitto-clients
+sudo apt install python3-pip
+sudo pip install paho-mqtt
+python3 subscriber.py
+
+#Configuration Mosquito
+sudo nano /etc/mosquitto/mosquitto.conf
+
+listener 1883
+allow_anonymous true //ligne to add
+
+#Start Mosquitto
+Sudo systemctl start mosquitto
+Sudo systemctl enable mosquitto
+Sudo systemctl restart mosquitto  //after we modify the .conf file
