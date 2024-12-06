@@ -5,7 +5,7 @@ import java.io.*;
 
 public class MQTTClient {
     public static void main(String[] args) {
-        String broker = "tcp://host.docker.internal:1883"; // Change if needed
+        String broker = "tcp://localhost:1883"; // Change if needed
         String clientId = "JavaClient";
         MqttClient mqttClient = null;
 
@@ -16,7 +16,7 @@ public class MQTTClient {
             mqttClient.connect(connOpts);
 
             // Read the WAV file as a byte array (raw binary data)
-            byte[] fileBytes = readFile("path/to/your/file.wav");
+            byte[] fileBytes = readFile("/Users/luciano/Downloads/melody_500KB.wav");
 
             // Publish the raw binary data
             MqttMessage message = new MqttMessage(fileBytes);
