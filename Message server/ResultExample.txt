@@ -1,0 +1,62 @@
+Result Sub1.py:
+xliu@raspberry-3B-1-6:~ $ python3 sub1.py
+/home/xliu/sub1.py:21: DeprecationWarning: Callback API version 1 is deprecated, update to latest version
+  client = mqtt.Client()
+Connected to broker
+Audio reçu et enregistré sous le nom : audio_20241206_135801.wav
+Audio reçu et enregistré sous le nom : audio_20241206_151153.wav
+Audio reçu et enregistré sous le nom : audio_20241206_152545.wav
+Audio reçu et enregistré sous le nom : audio_20241206_152721.wav
+Audio reçu et enregistré sous le nom : audio_20241206_153952.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154002.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154012.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154022.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154032.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154719.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154729.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154739.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154834.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154838.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154842.wav
+Audio reçu et enregistré sous le nom : audio_20241206_154846.wav
+Audio reçu et enregistré sous le nom : audio_20241206_155522.wav
+Audio reçu et enregistré sous le nom : audio_20241206_155526.wav
+^CTraceback (most recent call last):
+  File "/home/xliu/sub1.py", line 25, in <module>
+    client.loop_forever()
+  File "/usr/local/lib/python3.9/dist-packages/paho/mqtt/client.py", line 2297, in loop_forever
+    rc = self._loop(timeout)
+  File "/usr/local/lib/python3.9/dist-packages/paho/mqtt/client.py", line 1663, in _loop
+    socklist = select.select(rlist, wlist, [], timeout)
+KeyboardInterrupt
+
+xliu@raspberry-3B-1-6:~ $ ls
+audio_20241206_135801.wav  audio_20241206_154012.wav  audio_20241206_154834.wav  received_audio
+audio_20241206_151153.wav  audio_20241206_154022.wav  audio_20241206_154838.wav  received_audio.wav
+audio_20241206_152545.wav  audio_20241206_154032.wav  audio_20241206_154842.wav  sub1.py
+audio_20241206_152721.wav  audio_20241206_154719.wav  audio_20241206_154846.wav  subscriber.py
+audio_20241206_153952.wav  audio_20241206_154729.wav  audio_20241206_155522.wav
+audio_20241206_154002.wav  audio_20241206_154739.wav  audio_20241206_155526.wav
+
+------------------------------------------------------------------------------------------------
+
+sokhna@raspberrypi:~ $ python3  pubcontinue1.py
+/home/sokhna/pubcontinue1.py:41: DeprecationWarning: Callback API version 1 is deprecated, update to latest version
+  client = mqtt.Client()
+Recording audio...
+Connected successfully
+Recording WAVE 'audio_20241206_155522.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+Published audio_20241206_155522.wav to topic 'test'
+Recording audio...
+Message 1 published successfully!
+Recording WAVE 'audio_20241206_155526.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+Published audio_20241206_155526.wav to topic 'test'
+Recording audio...
+Message 2 published successfully!
+Recording WAVE 'audio_20241206_155530.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+^CAborted by signal Interrupt...
+arecord: pcm_read:2152: read error: Interrupted system call
+Stopping...
+Deleted file: audio_20241206_155522.wav
+Deleted file: audio_20241206_155530.wav
+Deleted file: audio_20241206_155526.wav
