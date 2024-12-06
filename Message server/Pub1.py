@@ -3,12 +3,14 @@ import time
 import paho.mqtt.client as mqtt
 import time
 import subprocess
-import uuid
 import base64
+from datetime import datetime
+import pytz
 
-# Generate a unique filename using UUID
-unique_id = uuid.uuid4().hex  # Generates a random UUID and converts it to a hexadecimal string
-file_name = f"audio_{unique_id}.wav"
+# Specify the desired time zone (e.g., "Europe/Paris")
+timezone = pytz.timezone("Europe/Paris")
+current_time = datetime.now(timezone).strftime("%Y%m%d_%H%M%S")
+file_name = f"audio_{current_time}.wav"  # Use timestamp in the file name
 
 # Run the arecord command to record audio with the dynamic filename
 subprocess.run(['sudo', 'arecord', '-D', 'plughw:1,0', '-d', '10' ,file_name])
