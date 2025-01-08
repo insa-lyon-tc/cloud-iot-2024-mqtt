@@ -1,0 +1,11 @@
+# Bridge to Broker 10.0.1.3
+connection bridge_to_10_0_1_3
+address 10.0.1.3:1883        # Address of Broker 10.0.1.3
+topic test out 0       # Forward "test/audio" topic from Broker 10.0.1.15 to 10.0.1.3
+topic test in 0        # Receive messages on "test/audio" topic from Broker 10.0.1.3
+
+# Bridge to Broker 10.0.1.6
+connection bridge_to_10_0_1_6
+address 10.0.1.6:1883        # Address of Broker 10.0.1.6
+topic test out 0       # Forward "test/audio" topic from Broker 10.0.1.15 to 10.0.1.6
+topic test in 0        # Receive messages on "test/audio" topic from Broker 10.0.1.6
