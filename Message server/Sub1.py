@@ -3,7 +3,7 @@ import base64
 
 def on_connect(client, userdata, flags, rc):
     print("Connected to broker")
-    client.subscribe("test/#")
+    client.subscribe("test/#", qos=1)
 
 def on_message(client, userdata, message):
     # Décoder le payload pour récupérer le nom et les données audio
@@ -21,5 +21,6 @@ def on_message(client, userdata, message):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect("10.0.1.15", 1883, 60) #to change
+client.connect("10.0.1.4", 1883, 60) #Choose the IP broker you want (10.0.1.6 / 10.0.1.4)
+
 client.loop_forever()
