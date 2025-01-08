@@ -21,6 +21,6 @@ def on_message(client, userdata, message):
 client = mqtt.Client()
 client.on_connect = on_connect
 client.on_message = on_message
-client.connect("10.0.1.4", 1883, 60) #Choose the IP broker you want (10.0.1.6 / 10.0.1.4)
+client.connect("10.0.1.3", 1883, 60) #Choose the IP broker you want (10.0.1.3 / 10.0.1.6)
 
 client.loop_forever()
