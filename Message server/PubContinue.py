@@ -6,10 +6,13 @@ from datetime import datetime
 import pytz
 import os
 import glob
-
+import logging
 # MQTT broker address
 BROKER_ADDRESS = "10.0.1.15"
 TOPIC = "test"
+
+# Configuration du logger
+logging.basicConfig(level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 # Specify the desired time zone
 timezone = pytz.timezone("Europe/Paris")
@@ -22,7 +25,7 @@ def on_connect(client, userdata, flags, rc):
         print(f"Failed to connect, return code: {rc}")
 
 def on_publish(client, userdata, mid):
-    print(f"Message {mid} published successfully!")
+    print(f"PUBACK received for Message ID: {mid}")
 
 # Function to record audio
 def record_audio():
@@ -42,6 +45,9 @@ client = mqtt.Client()
 client.on_connect = on_connect
 client.on_publish = on_publish
 
+# Activer le logger MQTT
+client.enable_logger(logging.getLogger())
+
 # Connect to the broker
 client.connect(BROKER_ADDRESS, 1883, 60)
 client.loop_start()
@@ -55,9 +61,9 @@ try:
         
         # Create payload and publish to broker
         payload = f"{file_name}|{audio_base64}"
-        client.publish(TOPIC, payload)  # Non-retained message
+        result=client.publish(TOPIC, payload, qos=1)  # Non-retained message
 
-        print(f"Published {file_name} to topic '{TOPIC}'")
+        print(f"Published {file_name} to topic '{TOPIC}'with MID {result.mid}")
 
         # Wait for the next recording
 except KeyboardInterrupt:
