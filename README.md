@@ -89,24 +89,25 @@ Lors de ce projet les tâches ont été réparties comme suit :
 - Deployment team tested MangDB, Spark and kafka with Docker images.
   
 **Mercredi 13/11/2024** :
-- 
-- 
-- 
-- 
-- 
+- Sensors and messaging team configured a cluster with one publisher and two subscribers, corrected audio file handling using alsamixer, and updated the code to include IDs for identifying audio files sent to subscribers.
+- Reactive Streaming team implemented brokers but encountered an issue when terminating an instance. In the next sprint, they plan to resolve this issue and begin developing an MQTT messaging interface.
+- Computing team successfully ran a Spark master and a worker on separate Raspberry Pis but encountered issues with communication between them and executing jobs across the setup.
+- Storage team  began setting up a replica set and sharding to enhance database scalability and reliability.
+- Deployment team attempted to build the image using the file provided on GitHub for the group message server (Mosquitto).
 
 **Vendredi 06/12/2024** :
-- 
-- 
-- 
-- 
+- sensors and messaging team updated the file naming format to include timestamps (e.g., audio_20241206_135712.wav), enabled continuous audio transmission every 4 seconds until interrupted, and implemented an MQTT Broker Bridge with a local broker and two remote brokers, allowing subscribers to receive files from multiple sources.
+- Reactive Streaming team resolved the previous bug, completed the MQTT interface, and established a connection with the Computing team. They aim to connect with the Sensor team by the next class.
+- Computing team implemented the ability to translate transcribed messages and worked on dockerizing the current code for easier deployment and maintenance on Raspberry Pis. The Docker setup successfully enabled running Spark and communication between the master and worker. The team collaborated with the Messaging team to set up a consumer that receives and transcribes audio files.
+- Storage team is continuing the deployment of the replica set and sharded cluster to ensure robust and scalable database architecture.
+- Deployment team created and tested a Mosquitto image locally (publisher and subscriber) with 3 containers. The next step is to test the image with 2 Raspberry Pis.
 
-- 
-**Mercredi 18/12/2024** :
-- 
-- 
-- 
-- 
+  **Mercredi 18/12/2024** :
+- collaborated with the Docker team to create an image, successfully built despite a sudo-related bug in the recording command that is under debugging. They also implemented MQTT QoS1, confirmed PUBACK reception, and verified reliable delivery between the publisher and the MQTT server. The team is evaluating the optimal size for audio segments, currently set to 4 seconds, in consultation with the Computing team.
+- Reactive Streaming team ??
+- Computing team ?? 
+- Storage team confirmed Docker images are functioning correctly and is currently building a Self-Managed Replica Set and Sharded Cluster (5 servers, 3 sharded clusters). The next steps include creating a DB template and connecting to the cloud.
+- Deployment ?? 
 
 **Mercredi 08/01/2025** :
 - 
