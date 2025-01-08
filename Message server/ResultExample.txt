@@ -40,23 +40,40 @@ audio_20241206_154002.wav  audio_20241206_154739.wav  audio_20241206_155526.wav
 
 ------------------------------------------------------------------------------------------------
 
-sokhna@raspberrypi:~ $ python3  pubcontinue1.py
-/home/sokhna/pubcontinue1.py:41: DeprecationWarning: Callback API version 1 is deprecated, update to latest version
+vthai@raspberrypi:~ $ python3 pub1.py
+/home/vthai/pub1.py:44: DeprecationWarning: Callback API version 1 is deprecated, update to latest version
   client = mqtt.Client()
+2025-01-08 14:52:16,864 - DEBUG - Sending CONNECT (u0, p0, wr0, wq0, wf0, c1, k60) client_id=b''
 Recording audio...
+2025-01-08 14:52:16,867 - DEBUG - Received CONNACK (0, 0)
 Connected successfully
-Recording WAVE 'audio_20241206_155522.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
-Published audio_20241206_155522.wav to topic 'test'
+Recording WAVE 'audio_20250108_155216.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+2025-01-08 14:52:20,945 - DEBUG - Sending PUBLISH (d0, q1, r0, m1), 'b'test'', ... (42754 bytes)
+Published audio_20250108_155216.wav to topic 'test'with MID 1
 Recording audio...
-Message 1 published successfully!
-Recording WAVE 'audio_20241206_155526.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
-Published audio_20241206_155526.wav to topic 'test'
+2025-01-08 14:52:20,957 - DEBUG - Received PUBACK (Mid: 1)
+PUBACK received for Message ID: 1
+Recording WAVE 'audio_20250108_155220.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+2025-01-08 14:52:25,054 - DEBUG - Sending PUBLISH (d0, q1, r0, m2), 'b'test'', ... (42754 bytes)
+Published audio_20250108_155220.wav to topic 'test'with MID 2
 Recording audio...
-Message 2 published successfully!
-Recording WAVE 'audio_20241206_155530.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
-^CAborted by signal Interrupt...
-arecord: pcm_read:2152: read error: Interrupted system call
-Stopping...
-Deleted file: audio_20241206_155522.wav
-Deleted file: audio_20241206_155530.wav
-Deleted file: audio_20241206_155526.wav
+2025-01-08 14:52:25,065 - DEBUG - Received PUBACK (Mid: 2)
+PUBACK received for Message ID: 2
+Recording WAVE 'audio_20250108_155225.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+2025-01-08 14:52:29,166 - DEBUG - Sending PUBLISH (d0, q1, r0, m3), 'b'test'', ... (42754 bytes)
+Published audio_20250108_155225.wav to topic 'test'with MID 3
+Recording audio...
+2025-01-08 14:52:29,181 - DEBUG - Received PUBACK (Mid: 3)
+PUBACK received for Message ID: 3
+Recording WAVE 'audio_20250108_155229.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+2025-01-08 14:52:33,288 - DEBUG - Sending PUBLISH (d0, q1, r0, m4), 'b'test'', ... (42754 bytes)
+Published audio_20250108_155229.wav to topic 'test'with MID 4
+Recording audio...
+2025-01-08 14:52:33,303 - DEBUG - Received PUBACK (Mid: 4)
+PUBACK received for Message ID: 4
+Recording WAVE 'audio_20250108_155233.wav' : Unsigned 8 bit, Rate 8000 Hz, Mono
+2025-01-08 14:52:37,404 - DEBUG - Sending PUBLISH (d0, q1, r0, m5), 'b'test'', ... (42754 bytes)
+Published audio_20250108_155233.wav to topic 'test'with MID 5
+Recording audio...
+2025-01-08 14:52:37,417 - DEBUG - Received PUBACK (Mid: 5)
+PUBACK received for Message ID: 5
